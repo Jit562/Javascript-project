@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Search Filter</title>
+
+    <!-- font awsome cdn link --> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
+    <!-- add css external -->
+    <link rel="stylesheet" href="./css/search-filter.css">
+
+    <!-- add external javascript -->
+    <script src="./js/search-filter.js" defer></script>
+
+
+    </head>
+
+<body>
+    
+
+    <h2>Search Filter</h2>
+
+    <input type="text" id="searchText" class="text" placeholder="name...." onkeyup="searchFun()">
+
+    <table id="myTable">
+        <tr class="hovertr">
+            <th>Name</th>
+            <th>City</th>
+            <th>Status</th>
+        </tr>
+        <tr class="hovertr">
+           <td>rahul</td>
+           <td>Delhi</td>
+           <td>Ok</td>
+        </tr>
+        <tr class="hovertr">
+           <td>Mohan</td>
+           <td>Delhi</td>
+           <td>Pending</td>
+        </tr>
+        <tr class="hovertr">
+           <td>Sohan</td>
+           <td>Delhi</td>
+           <td>Process</td>
+        </tr>
+        <tr class="hovertr">
+           <td>ramu</td>
+           <td>Delhi</td>
+           <td>Note approved</td>
+        </tr>
+    </table>
+
+    <!-- <script>
+
+        const searchFun = () => {
+            let filter = document.getElementById("searchText").value.toUpperCase();
+
+            let myTable = document.getElementById("myTable");
+            
+            let tr = myTable.getElementsByTagName("tr");
+
+            for(var i=0; i<tr.length; i++){
+                let td = tr[i].getElementsByTagName("td")[0];
+
+                if(td){
+                    let textvalue = td.textContent || td.innerHTML;
+
+                    if(textvalue.toUpperCase().indexOf(filter) > -1){
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+    </script> -->
+  
+
+</body>
+
+</html>
